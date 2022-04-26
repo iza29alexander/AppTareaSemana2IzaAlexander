@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTareaSemana2IzaAlexander.MainPage">
+
+    <StackLayout Margin="15,30,15,30">
+        <Frame BackgroundColor="#2196F3"  CornerRadius="0">
+            <Label Text="SISTEMA DE CALIFICACIÓN" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Frame BackgroundColor="LightBlue" Padding="24" CornerRadius="0">
+            <Label Text="PARCIAL 1" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+        </Frame>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+                
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nota seguimiento 1: " Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Center" FontSize="18" TextColor="Black"/>
+            <Entry x:Name="txtNs1" Placeholder="Ingrese solo numero" Keyboard="Numeric" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Examen 1: " Grid.Row="1" Grid.Column="0"  HorizontalOptions="Fill" VerticalOptions="Center" FontSize="18" TextColor="Black"/>
+            <Entry x:Name="txtExa1" Placeholder="Ingrese solo numero" Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Nota parcial 1: " Grid.Row="2" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Center" FontSize="18" TextColor="Black"/>
+            <Entry x:Name="txtNp1" IsReadOnly="True" Grid.Row="2" Grid.Column="1" TextColor="Black"/>
+        </Grid>
+
+        <Frame BackgroundColor="LightBlue" Padding="24" CornerRadius="0">
+            <Label Text="PARCIAL 2" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+        </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nota seguimiento 2: " Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Center" FontSize="18" TextColor="Black"/>
+                <Entry x:Name="txtNs2" Placeholder="Ingrese solo numero" Keyboard="Numeric" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Examen 2: " Grid.Row="1" Grid.Column="0"  HorizontalOptions="Fill" VerticalOptions="Center" FontSize="18" TextColor="Black"/>
+                <Entry x:Name="txtExa2" Placeholder="Ingrese solo numero" Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Nota parcial 2: " Grid.Row="2" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Center" FontSize="18" TextColor="Black"/>
+                <Entry x:Name="txtNp2" IsEnabled="False" Grid.Row="2" Grid.Column="1"/>
+            </Grid>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition/>         
+            </Grid.ColumnDefinitions>
+
+            <Label Text="NOTA FINAL: " Grid.Row="0" Grid.Column="0"  HorizontalOptions="Fill" VerticalOptions="Center" FontSize="18" TextColor="Black"/>
+            <Entry x:Name="txtNf" IsEnabled="False" Grid.Row="0" Grid.Column="1"/>
+        </Grid>
+        
+        <Button x:Name="btn1" Text="CALCULAR" Clicked="btn1_Clicked" BorderColor="Red" BorderWidth="3" CornerRadius="20" WidthRequest="100" HeightRequest="60"/> 
+
+    </StackLayout>
+
+</ContentPage>
